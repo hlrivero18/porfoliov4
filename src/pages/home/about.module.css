@@ -1,0 +1,137 @@
+.container{
+    padding: 5rem;
+}
+.profilePhone{
+    display: none
+}
+.card{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    color: var(--color-des);
+    border: 5px solid transparent;
+    border-radius: 12px; 
+
+
+    background-image: linear-gradient(#D0CFBB, #D0CFBB), linear-gradient(90deg,#1A2A43 3%, #515578 20%,  #737794 68%,  #D4D3BF 100%);;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.card h2{
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+.card .profile{
+    max-width: 320px;
+    display: grid;
+    align-items: center;
+}
+
+.card .profile img{
+    width: 100%;
+    object-fit: contain;
+    border: 5px solid #A9505A;
+}
+
+.description{
+    font-weight: 500;
+}
+
+.skills{
+    font-weight: 700;
+}
+
+.skills span{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-size: 3rem;
+}
+
+@media (max-width: 1100px) {
+    .container{
+        padding: 2rem;
+    }
+    .card{
+        grid-template-columns: 1fr;
+    }
+
+    .card .profile{
+        display: none;
+    }
+
+    .headerRow h2{
+        padding: 0;
+    } 
+
+    .headerRow{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 3fr;
+        margin-bottom: 20px;
+        gap: 2rem;
+    }
+    
+    .headerRow .profilePhone {
+        display: flex;
+        justify-content: center;
+    }
+
+    .headerRow .profilePhone img{
+        border-radius: 50%;
+        width: 150px;
+        border: 5px solid #A9505A;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .container{
+        padding: 2rem 1rem;
+    }  
+    .card{
+        grid-template-columns: 1fr;
+        padding: 2rem 20px;
+    }  
+    
+    .headerRow h2{
+        padding: 0;
+    } 
+    
+    .headerRow{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* 
+
+
+
+     
+    
+    .profile{
+        display: none;
+    }
+
+    
+
+    
+
+    .headerRow figure {
+        display: flex;
+        justify-content: center;
+    }
+
+    .headerRow figure img{
+        width: 120px;
+    }
+} */

@@ -1,0 +1,111 @@
+.navBar{
+    place-items: flex-end stretch;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.logo{
+    height: 50px;
+    margin-left: 35px;
+    cursor: pointer;
+}
+
+.logo img {
+
+    flex: none;
+    width: 11rem;
+    max-width: none;
+    display: block;
+    position: fixed;
+}
+
+.menu{
+    height: 50px;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    color: var(--color-des);
+}
+
+.menu ul{
+    display: flex;
+    gap: 10rem;
+    
+}
+
+.menu li{
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    border: 5px solid transparent;
+}
+
+.menu li:hover {
+    transition: .3s;
+    color: var(--color-bg);
+    background-color:#A9505A;
+    /* border-color: var(--color-des); */
+    background-image: linear-gradient(#A9505A, #A9505A), linear-gradient(180deg,#A9505A 33%, #0D213A 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.aboutMe{
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 19px;
+    position: fixed;
+    right: 35px;
+}
+
+.aboutMe a{
+    cursor: pointer;    
+    color: #ffff;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 5px solid transparent;
+    border-radius: 50px; 
+
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    transition: all .4s ease;
+
+    background-image: linear-gradient(#3375D7, #3375D7), linear-gradient(90deg,#3375D7 33%, #0D213A 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.aboutMe a{
+    text-decoration: none;
+    /* color: inherit; */
+}
+
+@media (max-width: 1400px) {
+    .menu{
+        display: none;
+    }
+    .aboutMe{
+        display: none;
+    }
+    .logo{
+        height: 30px;
+        margin-left: 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .navBar{
+        height: 60px;
+    }
+    .container h1{
+        font-size: 3rem;
+    }
+}

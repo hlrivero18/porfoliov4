@@ -1,0 +1,42 @@
+:root {
+
+    /*Background*/
+    --color-bg: #E5E4CF;
+    --color-footer: #D0CFBB;
+
+    /*Color font*/
+
+    --color-h1: #2A3041;
+    --color-des: #1E2C4E;
+    --coolor-font-footer: #515578;
+
+    /*Gradient*/
+    --gradient-card: linear-gradient(90deg,#1A2A43 3%, #515578 20%,  #737794 68%,  #D4D3BF 100%);
+    
+
+    /* Espaciados */
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 32px;
+
+    /* Bordes */
+    --radius-md: 12px;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body{
+    background-color: #E5E4CF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
