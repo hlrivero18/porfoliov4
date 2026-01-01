@@ -1,4 +1,4 @@
-.navBar{
+.navBar {
     place-items: flex-end stretch;
     height: 100px;
     margin-left: auto;
@@ -6,7 +6,7 @@
     display: flex;
 }
 
-.logo{
+.logo {
     height: 50px;
     margin-left: 35px;
     cursor: pointer;
@@ -21,7 +21,7 @@
     position: fixed;
 }
 
-.menu{
+.menu {
     height: 50px;
     font-weight: 700;
     margin-left: auto;
@@ -31,13 +31,13 @@
     color: var(--color-des);
 }
 
-.menu ul{
+.menu ul {
     display: flex;
     gap: 10rem;
-    
+
 }
 
-.menu li{
+.menu li {
     list-style: none;
     cursor: pointer;
     padding: 10px;
@@ -45,17 +45,22 @@
     border: 5px solid transparent;
 }
 
+.menu li a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .menu li:hover {
     transition: .3s;
     color: var(--color-bg);
-    background-color:#A9505A;
+    background-color: #A9505A;
     /* border-color: var(--color-des); */
-    background-image: linear-gradient(#A9505A, #A9505A), linear-gradient(180deg,#A9505A 33%, #0D213A 100%);
+    background-image: linear-gradient(#A9505A, #A9505A), linear-gradient(180deg, #A9505A 33%, #0D213A 100%);
     background-origin: border-box;
     background-clip: padding-box, border-box;
 }
 
-.aboutMe{
+.aboutMe {
     margin-left: auto;
     margin-right: 0;
     margin-bottom: 19px;
@@ -63,13 +68,13 @@
     right: 35px;
 }
 
-.aboutMe a{
-    cursor: pointer;    
+.aboutMe a {
+    cursor: pointer;
     color: #ffff;
     padding: 12px 16px;
     font-size: 16px;
     border: 5px solid transparent;
-    border-radius: 50px; 
+    border-radius: 50px;
 
     position: relative;
     overflow: hidden;
@@ -77,35 +82,138 @@
 
     transition: all .4s ease;
 
-    background-image: linear-gradient(#3375D7, #3375D7), linear-gradient(90deg,#3375D7 33%, #0D213A 100%);
+    background-image: linear-gradient(#3375D7, #3375D7), linear-gradient(90deg, #3375D7 33%, #0D213A 100%);
     background-origin: border-box;
     background-clip: padding-box, border-box;
 }
 
-.aboutMe a{
+.aboutMe a {
     text-decoration: none;
     /* color: inherit; */
 }
 
-@media (max-width: 1400px) {
-    .menu{
+/*Menu hamburgesa*/
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger svg {
+    height: 3em;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: var(--color-des);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lineTopBottom {
+    stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked+svg {
+    transform: rotate(-45deg);
+}
+
+.hamburger input:checked+svg .lineTopBottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
+
+.fullMenu {
+    position: fixed;
+    inset: 0;
+    transform: translateX(110%);
+    transition: transform 0.4s ease;
+    z-index: 999;
+    background-color: var(--color-bg);
+}
+
+.fullMenu ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullMenu li {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--color-des);
+    padding: 2rem;
+
+}
+
+.fullMenu li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.fullMenu li:hover {
+    background-color: #A9505A;
+    color: var(--color-bg);
+    transition: .3s;
+}
+
+.show {
+    transform: translateX(0);
+}
+
+
+@media (max-width: 1100px) {
+    .menu {
         display: none;
     }
-    .aboutMe{
+
+    .aboutMe {
         display: none;
     }
-    .logo{
-        height: 30px;
+
+    .logo {
+        height: 70px;
         margin-left: 20px;
+    }
+
+    .hamburger {
+        display: initial;
+        margin-left: auto;
+        margin-right: 0;
+        margin-bottom: 19px;
+        position: fixed;
+        right: 35px;
     }
 }
 
 
 @media (max-width: 480px) {
-    .navBar{
-        height: 60px;
+    .navBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        display: flex;
+        z-index: 100;
     }
-    .container h1{
-        font-size: 3rem;
+
+    .logo img {
+        position: relative;
     }
 }

@@ -1,0 +1,36 @@
+.container{
+    padding: 5rem;
+}
+
+.container h1{
+    font-family: "BBH Hegarty", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 7rem;
+    color: var(--color-des);
+    padding-bottom: 2rem;
+}
+
+.cardContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.card {
+    text-align: center;
+    color: var(--color-des);
+}
+
+.card h3 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.card .company {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+
