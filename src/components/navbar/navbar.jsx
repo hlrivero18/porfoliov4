@@ -33,7 +33,7 @@ function NavBar() {
                 </ul>
             </div>
             <div className={style.aboutMe}>
-                <a href="#about">Acerca de mi</a>
+                <a href="/#about">Acerca de mi</a>
             </div>
 
             {/* Hamburger menu */}
@@ -48,7 +48,7 @@ function NavBar() {
             <div className={`${style.fullMenu} ${openMenu ? style.show : ""}`}>
                 <ul>
                     <li onClick={handleChange}>
-                        <a href="#about">Acerca de mi</a>
+                        <a href="/#about">Acerca de mi</a>
                     </li>
                     {routes.map((e, i) => (
                         <li key={i} onClick={handleChange}>
