@@ -1,15 +1,13 @@
 import style from "./navbar.module.css"
 import logo from "../../assets/logo.png"
 import { useState } from "react"
-import { menu } from "framer-motion/client"
 
 function NavBar() {
     const [openMenu, setOpenMenu] = useState(false)
-    const li = ["Proyectos", "Experiencia", "Certificaciones"]
-    const routes  = [
-        {name: "Proyectos", link: "/projects"},
-        {name: "Experiencia", link: "/experience"},
-        {name: "Certificaciones", link: "/certifications"}
+    const routes = [
+        { name: "Proyectos", link: "/project" },
+        { name: "Experiencia", link: "/experience" },
+        { name: "Certificaciones", link: "/certifications" }
     ]
 
     const handleChange = () => {

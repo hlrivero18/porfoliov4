@@ -4,6 +4,7 @@ import Home from './pages/home/home'
 import Footer from './components/footer/footer'
 import Loader from './components/loader/loader'
 import Experience from './pages/Experience/experience'
+import Project from './pages/project/project'
 
 import { useState, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
@@ -34,6 +35,7 @@ function App() {
         <Route path="*" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/experience" element={<Experience />} />
+        <Route path="/project" element={<Project />} />
       </Routes>
 
       <Footer />
