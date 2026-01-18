@@ -1,14 +1,11 @@
 import style from "./navbar.module.css"
 import logo from "../../assets/logo.png"
 import { useState } from "react"
+import { useSelector } from "react-redux"
 
 function NavBar() {
     const [openMenu, setOpenMenu] = useState(false)
-    const routes = [
-        { name: "Proyectos", link: "/project" },
-        { name: "Experiencia", link: "/experience" },
-        { name: "Certificaciones", link: "/certifications" }
-    ]
+    const routes = useSelector(state => state.menu)
 
     const handleChange = () => {
         setOpenMenu(prev => !prev);
@@ -24,7 +21,7 @@ function NavBar() {
                     {routes.map((e, i) => {
                         return (
                             <li key={i}>
-                                <a href={e.link}>{e.name}</a>
+                                <a href={e.route}>{e.name}</a>
                             </li>
                         )
                     })}
@@ -50,7 +47,7 @@ function NavBar() {
                     </li>
                     {routes.map((e, i) => (
                         <li key={i} onClick={handleChange}>
-                            <a href={e.link}>{e.name}</a>
+                            <a href={e.route}>{e.name}</a>
                         </li>
                     ))}
                 </ul>

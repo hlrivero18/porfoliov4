@@ -22,7 +22,7 @@ function Project() {
             title: "Pokemon",
             techSkills: "React, Express, PostgreSQL",
             repo: "https://github.com/hlrivero18/pokemon",
-            deploy: "",
+            deploy: "https://pokemon-omega-three.vercel.app/",
             description: `Desarrolle una aplicación web que permite visualizar una galeria de pokemones con funcionalidades como paginado, creación de un pokemon, persistencia
             en la base de datos y la posibilidad de eliminarlo.`,
             img: [pokemonimg1]

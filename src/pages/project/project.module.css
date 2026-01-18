@@ -35,6 +35,13 @@
     font-size: 2rem;
     margin-bottom: 1rem;
     border-bottom: 5px solid;
+    cursor: pointer;
+}
+
+.card h3:hover {
+    transition: .4s;
+    color: var(--coolor-font-footer);
+    border-bottom: 5px solid var(--coolor-font-footer);
 }
 
 .card .company {

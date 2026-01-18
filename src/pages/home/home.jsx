@@ -12,9 +12,15 @@ function Home(){
                     Desarrollador<br/>
                     Web <span>
                             <ul>
-                                <li><FaGithub/></li>
-                                <li><FaLinkedinIn/></li>
-                                <li><IoIosMail/></li>
+                                <li>
+                                    <a href="https://github.com/hlrivero18" target="_blank"><FaGithub/></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/hector-luis-rivero-311578260/" target="_blank"><FaLinkedinIn/></a>
+                                </li>
+                                <li>
+                                    <a href="mailto:hectorluisrivero14@gmail.com"><IoIosMail/></a>
+                                </li>
                             </ul>
                          </span>
                 </h1>

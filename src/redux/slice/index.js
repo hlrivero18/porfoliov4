@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   value: 0,
   menu: [
-    {name: "Proyectos", route: "/proyect"}, 
+    {name: "Proyectos", route: "/project"}, 
     {name: "Experiencia", route: "/experience"}, 
     {name: "Certificaciones", route: "/certifications"}]
 }
