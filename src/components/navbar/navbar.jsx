@@ -44,7 +44,7 @@ function NavBar() {
             <div className={`${style.fullMenu} ${openMenu ? style.show : ""}`}>
                 <ul>
                     <li onClick={handleChange}>
-                        <Link to="/#about">Acerca de mi</Link>
+                        <Link to="/" state={{scrollTo: "about"}}>Acerca de mi</Link>
                     </li>
                     {routes.map((e, i) => (
                         <li key={i} onClick={handleChange}>
