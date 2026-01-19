@@ -11,12 +11,13 @@ import { useState, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import ScrollToHash from './hooks/scrollToHash'
 
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 
 
 
 function App() {
   const [initialLoading, setInitialLoading] = useState(true)
+  const location = useLocation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,17 +29,23 @@ function App() {
 
   return (
     <>
+      {/* <ScrollToHash initialLoading={initialLoading} /> */}
+
       <AnimatePresence>
         {initialLoading && <Loader />}
       </AnimatePresence>
+
       <NavBar />
-      <Routes>
-        <Route path="*" element={<Home />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="/certifications" element={<Certifications />} />
-      </Routes>
+
+      <AnimatePresence mode="wait" >
+        <Routes location={location} key={location.pathname}>
+          <Route path="*" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="/certifications" element={<Certifications />} />
+        </Routes>
+      </AnimatePresence>
 
       <Footer />
     </>

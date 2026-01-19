@@ -138,7 +138,13 @@ export default function Certifications() {
     };
 
     return (
-        <section className={style.container}>
+        <motion.section
+            className={style.container}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+        >
             <h1>Certificaciones</h1>
             <div className={style.certificationsContainer}>
                 <div className={style.arrowButton}>
@@ -184,8 +190,8 @@ export default function Certifications() {
                 ))}
             </div>
             <div className={style.leggend}>
-              ← <IoIosInformationCircleOutline /> Desliza para navegar →
+                ← <IoIosInformationCircleOutline /> Desliza para navegar →
             </div>
-        </section>
+        </motion.section>
     )
 }

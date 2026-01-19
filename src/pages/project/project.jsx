@@ -4,6 +4,7 @@ import botimg1 from "../../assets/project/bot/img1.png"
 import pokemonimg1 from "../../assets/project/pokemon/img2.png"
 import crudJavaimg1 from "../../assets/project/crudjava/img1.png"
 import { IoIosInformationCircleOutline } from "react-icons/io";
+import { motion } from "framer-motion";
 
 function Project() {
     const projects = [
@@ -42,7 +43,13 @@ function Project() {
 
 
     return (
-        <section className={style.container}>
+        <motion.section
+            className={style.container}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+        >
             <h1>Proyectos</h1>
             <p className={style.leggend}>
                 <IoIosInformationCircleOutline /> Clickea el titulo del proyecto para ver el deploy o el repositorio.
@@ -70,7 +77,7 @@ function Project() {
                 })}
 
             </div>
-        </section>
+        </motion.section>
     )
 
 }

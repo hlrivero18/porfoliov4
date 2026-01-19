@@ -33,7 +33,7 @@ function About(){
                     <p className={style.skills}>
                         Tech skills:
                         <span >
-                            <FaJs/> <FaPython/> <FaJava/>  <TbBrandCSharp/> <TbBrandDjango/> <FaReact/> <FaNodeJs/> <SiExpress/> <SiMysql/> <SiPostgresql/>
+                            <FaJs/> <FaPython/> <FaJava/> <TbBrandDjango/> <FaReact/> <FaNodeJs/> <SiExpress/> <SiMysql/> <SiPostgresql/>
                             <FaGitAlt/> <SiFigma/>
                         </span>
 

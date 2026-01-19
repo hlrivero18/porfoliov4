@@ -2,6 +2,7 @@ import style from "./experience.module.css"
 import lKaizen from "../../assets/experience/KaiZen2b.png"
 import lDia from "../../assets/experience/dia.png"
 import { FaTools } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function Experience() {
     const experiences = [
@@ -42,7 +43,13 @@ function Experience() {
 
 
     return (
-        <section className={style.container}>
+        <motion.section
+            className={style.container}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+        >
             <h1>Experiencia</h1>
             <div className={style.cardContainer}>
 
@@ -64,7 +71,7 @@ function Experience() {
                 })}
 
             </div>
-        </section>
+        </motion.section>
     )
 
 }

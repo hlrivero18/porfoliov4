@@ -2,6 +2,7 @@ import style from "./navbar.module.css"
 import logo from "../../assets/logo.png"
 import { useState } from "react"
 import { useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 
 function NavBar() {
     const [openMenu, setOpenMenu] = useState(false)
@@ -13,22 +14,22 @@ function NavBar() {
 
     return (
         <nav className={style.navBar}>
-            <a href="/" className={style.logo}>
+            <Link to="/" className={style.logo}>
                 <img src={logo} alt="home" />
-            </a>
+            </Link>
             <div className={style.menu}>
                 <ul>
                     {routes.map((e, i) => {
                         return (
                             <li key={i}>
-                                <a href={e.route}>{e.name}</a>
+                                <Link to={e.route}>{e.name}</Link>
                             </li>
                         )
                     })}
                 </ul>
             </div>
             <div className={style.aboutMe}>
-                <a href="/#about">Acerca de mi</a>
+                <Link to="/" state={{scrollTo: "about"}}>Acerca de mi</Link>
             </div>
 
             {/* Hamburger menu */}
@@ -43,11 +44,11 @@ function NavBar() {
             <div className={`${style.fullMenu} ${openMenu ? style.show : ""}`}>
                 <ul>
                     <li onClick={handleChange}>
-                        <a href="/#about">Acerca de mi</a>
+                        <Link to="/#about">Acerca de mi</Link>
                     </li>
                     {routes.map((e, i) => (
                         <li key={i} onClick={handleChange}>
-                            <a href={e.route}>{e.name}</a>
+                            <Link to={e.route}>{e.name}</Link>
                         </li>
                     ))}
                 </ul>
