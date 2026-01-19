@@ -13,7 +13,6 @@
 
     font-size: 7rem;
     color: var(--color-des);
-    padding-bottom: 4rem;
 }
 
 .cardContainer{
@@ -74,6 +73,12 @@
     font-size: 0.9rem;
     color: var(--color-accent);
 }
+.leggend {
+    font-size: 1rem;
+    color: var(--color-des);
+    margin-top: 1rem;
+    padding-bottom: 4rem;
+}
 
 @media (max-width: 1500px) {
     .container{
@@ -81,6 +86,9 @@
     }
     .container h1{
         font-size: 5rem;
+        text-align: center;
+    }
+    .leggend{
         text-align: center;
     }
     .logoContainer img {
@@ -96,7 +104,11 @@
     .container h1{
         font-size: 2.5rem;
         padding-top: 6rem;
+    }
+
+    .leggend{
         padding-bottom: 1rem;
+        font-size: 0.7rem;
     }
     .cardContainer{
         margin: 2rem 0;

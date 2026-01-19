@@ -61,6 +61,12 @@
     background-color: rgb(194, 193, 193);
 }
 
+.leggend {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-des);
+    margin-top: 1rem;
+}
 
 
 @media (max-width: 1400px) {
@@ -102,6 +108,9 @@
         border-radius: 10px;
         user-select: none;
     }
+    .leggend {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -124,6 +133,9 @@
         font-size: 1rem;
     }
     .infoContainer p{
+        font-size: 0.8rem;
+    }
+    .leggend {
         font-size: 0.8rem;
     }
 

@@ -2,6 +2,7 @@ import React, { use, useCallback, useState, useEffect, useRef } from "react";
 import style from "./certifications.module.css"
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
+import { IoIosInformationCircleOutline } from "react-icons/io";
 
 
 //imagenes
@@ -181,6 +182,9 @@ export default function Certifications() {
                             }`}
                     />
                 ))}
+            </div>
+            <div className={style.leggend}>
+              ← <IoIosInformationCircleOutline /> Desliza para navegar →
             </div>
         </section>
     )

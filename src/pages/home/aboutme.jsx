@@ -19,12 +19,15 @@ function About(){
                         </h2>
                     </div>
                     <p className={style.description}>
-                        Soy un desarrollador web ágil, autodidacta y responsable, apasionado por resolver
-                        problemas mediante el uso de herramientas tecnológicas, me destaco por mi capacidad de resolución de problemas, 
-                        autocrítica, gestión del tiempo, creatividad y trabajo en equipo, cualidades que aplico constantemente para ofrecer soluciones dinámicas y eficientes que mejoren la experiencia del cliente. <br/><br/>
-                        Tengo experiencia como soporte técnico independiente, brindando soluciones
-                        efectivas a usuarios, lo que me ha permitido fortalecer mis habilidades de comunicación y atención al cliente.<br/><br/>
-                        Actualmente trabajo en un entorno laboral de desarrollo, donde participo en el diseño y mantenimiento de aplicaciones web, además de la resolución de bugs, optimización de rendimiento y documentación técnica de vistas, modelos y endpoints. También colaboro en el diseño de soluciones escalables bajo metodologías ágiles Scrum.
+                        Estudiante de la Tecnicatura en Inteligencia Artificial en la UNAHUR y 
+                        desarrollador web autodidacta, con enfoque en la creación de soluciones tecnológicas, eficientes y escalables.
+                        <br/><br/>
+                        Tengo experiencia en desarrollo y mantenimiento de aplicaciones web, resolución de bugs, optimización de rendimiento y 
+                        documentación técnica, trabajando bajo metodologías ágiles como Scrum. Además, mi experiencia en soporte técnico independiente 
+                        fortaleció mis habilidades de comunicación y atención al cliente.
+                        <br/><br/>
+                        Busco seguir creciendo profesionalmente y aportar valor en proyectos que combinen tecnología, impacto real y aprendizaje continuo.
+
                         <br/><br/>                    
                     </p>
                     <p className={style.skills}>

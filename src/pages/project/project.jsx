@@ -3,6 +3,7 @@ import { FaTools } from "react-icons/fa";
 import botimg1 from "../../assets/project/bot/img1.png"
 import pokemonimg1 from "../../assets/project/pokemon/img2.png"
 import crudJavaimg1 from "../../assets/project/crudjava/img1.png"
+import { IoIosInformationCircleOutline } from "react-icons/io";
 
 function Project() {
     const projects = [
@@ -43,6 +44,9 @@ function Project() {
     return (
         <section className={style.container}>
             <h1>Proyectos</h1>
+            <p className={style.leggend}>
+                <IoIosInformationCircleOutline /> Clickea el titulo del proyecto para ver el deploy o el repositorio.
+            </p>
             <div className={style.cardContainer}>
 
                 {projects.map((element, index) => {
@@ -55,7 +59,7 @@ function Project() {
                                 <p className={style.company}>
                                     {`Tech skills: ${element.techSkills}`}</p>
                                 <p className={style.description}>
-                                    {element.description} <br/><a className={style.repo} href={element.repo} target="_blank"> Click aqui para ir al repositorio.</a>
+                                    {element.description} <br /><a className={style.repo} href={element.repo} target="_blank"> Click aqui para ir al repositorio.</a>
                                 </p>
                             </div>
                             <figure className={style.logoContainer}>

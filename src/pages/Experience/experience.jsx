@@ -1,4 +1,4 @@
-import style from "./Experience.module.css"
+import style from "./experience.module.css"
 import lKaizen from "../../assets/experience/KaiZen2b.png"
 import lDia from "../../assets/experience/dia.png"
 import { FaTools } from "react-icons/fa";
