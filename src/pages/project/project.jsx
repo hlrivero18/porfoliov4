@@ -3,11 +3,23 @@ import { FaTools } from "react-icons/fa";
 import botimg1 from "../../assets/project/bot/img1.png"
 import pokemonimg1 from "../../assets/project/pokemon/img2.png"
 import crudJavaimg1 from "../../assets/project/crudjava/img1.png"
+import erp_pchimg1 from "../../assets/project/erp/erp_pch.png"
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { motion } from "framer-motion";
 
 function Project() {
     const projects = [
+        {
+            id: 0,
+            title: "ERP",
+            techSkills: "Vite/React, NestJs",
+            repo: "https://github.com/hlrivero18/erp_pch",
+            deploy: "https://github.com/hlrivero18/erp_pch_client",
+            description: `Sistema de registro de movimientos de una pyme dedicada al rubro gastronómico, 
+            desarrollando un backend(NestJs) y frontend(Vite/React) para registrar
+            productos y pedidos en una base de datos postgresql (En desarrollo).`,
+            img:[erp_pchimg1]
+        },
         {
             id: 1,
             title: "Bot de WhatsApp",
